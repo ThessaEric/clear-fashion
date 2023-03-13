@@ -1,0 +1,83 @@
+/* Set global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+  }
+  
+  h1, h2 {
+    margin-top: 0;
+  }
+  
+  section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the options section */
+  #options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #show-select,
+  #page-select,
+  #reasonable-select,
+  #recent-select,
+  #brand-select,
+  #sort-select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #brand-select {
+    width: 200px;
+  }
+  
+  /* Style the indicators section */
+  #indicators {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #indicators div {
+    width: 33%;
+  }
+  
+  #indicators span:first-child {
+    font-weight: bold;
+  }
+  
+  #indicators span:not(:first-child) {
+    margin-left: 10px;
+  }
+  
+  /* Style the products section */
+  #products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  /* Style the view favorites button */
+  .ViewFavorites {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ViewFavorites:hover {
+    background-color: #16a085;
+  }
+  
