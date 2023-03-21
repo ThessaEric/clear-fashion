@@ -1,7 +1,7 @@
 /* eslint-disable no-console, no-process-exit */
-const dedicatedbrand = require('./eshops/dedicatedbrand');
+const dedicatedbrand = require('C:/Users/thess/WebApp/clear-fashion/server/eshops/dedicatedbrand');
 
-async function sandbox (eshop = 'https://www.dedicatedbrand.com/en/men/news') {
+async function sandbox (eshop = 'https://www.montlimart.com/99-vetements') {
   try {
     console.log(`🕵️‍♀️  browsing ${eshop} eshop`);
 
