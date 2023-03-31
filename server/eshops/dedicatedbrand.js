@@ -9,17 +9,16 @@ const cheerio = require('cheerio');
 const parse = data => {
   const $ = cheerio.load(data);
 
-  return $('.products-list .products-list__block*')
+  return $('.productList-container .productList')
     .map((i, element) => {
       const name = $(element)
-        .find('.text-reset')
+        .find('.productList-title')
         .text()
         .trim()
-        .replace(/\s/g, ' ')
-      console.log('ok')
+        .replace(/\s/g, ' ');
       const price = parseInt(
         $(element)
-          .find('.price')
+          .find('.productList-price')
           .text()
       );
 
@@ -39,8 +38,12 @@ module.exports.scrape = async url => {
 
     if (response.ok) {
       const body = await response.text();
-
-      return parse(body);
+      const products = parse(body);
+      
+      //json file
+      jsonString = JSON.stringify(products, null, 2);
+      fs.writeFileSync('montlimart_products.json', jsonString)
+      return products;
     }
 
     console.error(response);
